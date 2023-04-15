@@ -1,0 +1,19 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: gray;
+}
+
+.title {
+    font-family: 'Courier New', Courier, monospace;
+    color: green;
+    padding: 30px;
+    border: red 2px solid;
+    border-radius: 15px;
+    margin: 20px;
+    justify-content: center;
+    text-align: center;
+    background-color: aquamarine;
+
+}
