@@ -190,11 +190,13 @@ gritar('aaaaaa') // ¡aaaaaa!*/
 Crear una función obtenerNombreCompleto que tome como argumento un
 nombre y un apellido y devuelva un string con la unión de ambos valores
 
-obtenerNombreCompleto('Ada', 'Lovelace') // 'Ada Lovelace'*/
+obtenerNombreCompleto('Ada', 'Lovelace')  'Ada Lovelace'
 
-//const obtenerNombreCompleto = (nombre, apellido)=> `${nombre}, ${apellido}`;
+const obtenerNombreCompleto = (nombre, apellido)=> `${nombre}, ${apellido}`;
 
-//console.log(obtenerNombreCompleto("Ada", "Lovelace"));
+console.log(obtenerNombreCompleto("Ada", "Lovelace"));
+
+*/
 
 
 
@@ -203,12 +205,12 @@ obtenerNombreCompleto('Ada', 'Lovelace') // 'Ada Lovelace'*/
 Crear una función saludar que tome como argumentos un nombre y devuelva
 un saludo que lo incluya.
 
-saludar('Ada') // 'Hola Ada, un gusto conocerte'*/
+saludar('Ada')  'Hola Ada, un gusto conocerte'
 
-//const saludar = nombre=> `Hola ${nombre}, como garlopa estas?`;
+const saludar = nombre=> `Hola ${nombre}, como garlopa estas?`;
 
-//console.log (saludar("ada"));
-
+console.log (saludar("ada"));
+*/
 
 
 /*11- saludarGritando(nombre, apellido)
@@ -222,15 +224,17 @@ conocerte!
 
 
 -TIP: recordá que los resultados de funciones se pueden guardar en variables
-para usarlos más adelante*/
+para usarlos más adelante
 
-//const nombreCompleto = obtenerNombreCompleto('Ada', 'Lovelace')
-//const saludo = saludar(nombreCompleto)
-//const grito = gritar(saludo)
+const nombreCompleto = obtenerNombreCompleto('Ada', 'Lovelace');
+const saludo = saludar(nombreCompleto);
+const grito = gritar(saludo);
 
 
 
-//console.log(grito) // ¡Hola Ada Lovelace, un gusto conocerte!*/
+console.log(grito) // ¡Hola Ada Lovelace, un gusto conocerte!
+
+*/
 
 
 
@@ -242,10 +246,17 @@ nombre, un número poblacion y un string pais y devuelva string con el siguiente
 formato: La ciudad de NOMBRE tiene una población de POBLACION habitantes y
 está ubicada en PAIS
 
-obtenerDatosDeCiudad('Santa Fe', 545606, 'Argentina') // 'La ciudad de
+obtenerDatosDeCiudad('Santa Fe', 545606, 'Argentina') 'La ciudad de
 Santa Fe tiene una población de 545606 habitantes y está ubicada en
-Argentina'*/
+Argentina'
 
+
+const obtenerDatosDeCiudad = (nombre, poblacion, pais) => 
+ `La ciudad de ${nombre} tiene una población de ${poblacion} habitantes y está ubicada en ${pais}`;
+
+console.log(obtenerDatosDeCiudad('Santa Fe', 545606, 'Argentina'));
+
+*/
 
 
 
@@ -258,9 +269,15 @@ horas
 
 convertirHorasEnSegundos(1) // 3600
 convertirHorasEnSegundos(3) // 10800
-convertirHorasEnSegundos(4.5) // 16200*/
+convertirHorasEnSegundos(4.5) // 16200
 
+const convertirHorasASegundos = (horas) => horas * 3600;
 
+console.log(convertirHorasASegundos(1));
+console.log(convertirHorasASegundos(3));
+console.log(convertirHorasASegundos(4.5));
+
+*/
 
 /*14- calcularPerimetroRectangulo(ancho, alto)
 
@@ -268,7 +285,15 @@ Crear una función calcularAreaTriangulo que tome como argumentos el ancho
 y el alto de un rectángulo y devuelva su perímetro
 
 calcularPerimetroRectangulo(3.2, 5) // 16.4
-calcularPerimetroRectangulo(10, 20) // 60*/
+calcularPerimetroRectangulo(10, 20) // 60
+
+const calcularAreaTriangulo = (ancho, alto) => 2* (ancho + alto);
+
+
+console.log(calcularAreaTriangulo(3.2, 5));
+console.log(calcularAreaTriangulo(10, 20));
+
+*/
 
 
 
@@ -279,11 +304,20 @@ y un porcentaje y devuelva el valor del porcentaje correspondiente al número
 
 calcularPorcentaje(100, 15) // 15
 calcularPorcentaje(10, 50) // 5
-calcularPorcentaje(200, 10) // 20*/
+calcularPorcentaje(200, 10) // 20
 
 
+const calcularPorcentaje = (numero, porcentaje) => (porcentaje/100) * numero;
 
-/*16- sumarPorcentaje(numero, porcentaje)
+console.log(calcularPorcentaje(100, 15));
+console.log(calcularPorcentaje(10, 50));
+console.log(calcularPorcentaje(200, 10));
+
+*/
+
+/*
+
+16- sumarPorcentaje(numero, porcentaje)
 
 Crear una función sumarPorcentaje que tome como argumentos un número y
 un porcentaje y devuelva la suma de dicho número con la de su porcentaje.
@@ -291,9 +325,16 @@ Usar la función calcularPorcentaje para obtener el porcentaje a sumar
 
 sumarPorcentaje(100, 15) // 115
 sumarPorcentaje(10, 50) // 15
-sumarPorcentaje(200, 10) // 220*/
+sumarPorcentaje(200, 10) // 220
 
+const sumarPorcentaje = (numero, porcentaje) =>
+  numero + calcularPorcentaje(numero, porcentaje);
 
+  console.log(sumarPorcentaje(100, 15));
+  console.log(sumarPorcentaje(10, 50));
+  console.log(sumarPorcentaje(200, 10));
+  
+  */
 
 /*17-restarPorcentaje(numero, porcentaje)
 
